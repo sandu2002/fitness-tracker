@@ -1,7 +1,6 @@
 import 'package:fitness_tracker/widgets/dashboard.dart';
 import 'package:fitness_tracker/widgets/side_menu.dart';
 import 'package:fitness_tracker/widgets/summary_widget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
