@@ -1,5 +1,6 @@
 import 'package:fitness_tracker/constants/colors.dart';
 import 'package:fitness_tracker/data/health_detials_data.dart';
+import 'package:fitness_tracker/utils/responsive.dart';
 import 'package:fitness_tracker/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +10,12 @@ class ActivityWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final HealthModelData = HealthDetails();
+    final bool isMobile = Responsive.isMobile(context);
     return GridView.builder(
       itemCount: HealthModelData.healthData.length,
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
+        crossAxisCount: isMobile ? 2 : 4,
         crossAxisSpacing: 15,
         mainAxisSpacing: 12,
       ),

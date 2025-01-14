@@ -1,4 +1,5 @@
 import 'package:fitness_tracker/constants/colors.dart';
+import 'package:fitness_tracker/utils/responsive.dart';
 import 'package:fitness_tracker/widgets/pie_chart.dart';
 import 'package:fitness_tracker/widgets/sheduled_widget.dart';
 import 'package:fitness_tracker/widgets/summary_deatils.dart';
@@ -9,9 +10,10 @@ class SummaryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDesktop = Responsive.isDesktop(context);
     return Container(
-      decoration: const BoxDecoration(
-        color: cardBackgroundColor,
+      decoration: BoxDecoration(
+        color: !isDesktop ? cardBackgroundColor : null,
       ),
       child: const Padding(
         padding: EdgeInsets.all(20.0),

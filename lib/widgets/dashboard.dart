@@ -17,6 +17,9 @@ class _DashboardState extends State<Dashboard> {
         padding: const EdgeInsets.symmetric(horizontal: 18),
         child: Column(
           children: [
+            SizedBox(
+              height: 20,
+            ),
             HeaderWidget(),
             SizedBox(
               height: 15,
